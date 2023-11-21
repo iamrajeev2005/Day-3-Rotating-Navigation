@@ -1,0 +1,118 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #333;
+    overflow-x: hidden;
+}
+.container{
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform .5s linear;
+    padding: 20px;
+}
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+.container.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: .2s;
+}
+.container.show-nav .circle{
+transform: rotate(-90deg);
+}
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+.circle{
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transfrom .5s linear;
+}
+.circle button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 27px;
+    color: #fff;
+}
+.circle button:focus{
+    outline: none;
+}
+.circle button#open{
+    left: 60%;
+}
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+nav{
+    position: fixed;
+    bottom: 4%;
+    left: 2%;
+    z-index: 100;
+}
+nav ul{
+    list-style-type:none ;
+    padding-left: 10px;
+}
+nav ul li{
+    color: #fff;
+    margin: 30px 0px;
+    transform: translateX(-100%);
+    transition: transform .5s ease-in;
+}
+nav ul li + li{
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+nav ul li + li + li{
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+nav ul li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.content{
+    text-align: center;
+    font-size: 1.8vw;
+}
+.para{
+    display: flex;
+    justify-content: space-between;
+}
+.para .img{
+    border: 1px solid black;
+    height: 500px;
+    width:45%;
+    margin: 15px;
+}
+.para .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.para>p{
+    width: 47%;
+    height: 100%;
+    padding: 40px;
+    font-size: 2vw;
+}
+
