@@ -1,12 +1,12 @@
 @font-face {
-    font-family: "Gilroy";
+    font-family: Gilroy;
     src: url(../Day\ 3\ -\ Rotating\ Navigation/Gilroy);
 }
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: "Gilroy";
+    font-family: Gilroy;
 }
 
 html,body{
